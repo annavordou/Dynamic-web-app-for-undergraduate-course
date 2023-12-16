@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Στυλισμός τίτλου της σελίδας */
+.title {
+    text-align: center;
+    background-color: #b03a3a;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    padding: 10px;
+}
+
+.options {
+    width: 25%;
+    margin-left: 20px;
+}
+
+.content {
+    width: 75%;
+}
+
+.index-content {
+    flex: 2;
+    background-image: url('images/class.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #D54B4BF2;
+}
+
+/* Στυλισμός για το κείμενο καλωσορίσματος */
+.welcome-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 5px;
+}
+
+.welcome-section h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.welcome-section ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.welcome-section li,
+.communication-section li {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.homework li,
+.communication li{
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.communication ol{
+    margin-left: 20px;
+}
+
+.announcement,
+.communication,
+.document,
+.homework,
+.user {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.announcement h2,
+.communication h2,
+.document h2,
+.homework h2,
+.user h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.announcement p,
+.communication p,
+.document p,
+.homework p,
+.user p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+#top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #b03a3a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 999;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#top-checkbox {
+    display: none;
+}
+
+#top-checkbox:checked ~ #top-button {
+    opacity: 1;
+}
+
+#top-button:hover {
+    background-color: #d54b4b;
+}
+
+.communication-section {
+    margin-bottom: 20px;
+}
+
+.communication-section p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.communication-section ul,
+.homework ol {
+    padding-left: 20px;
+}
+
+.communication input[type="text"],
+.communication input[type="password"],
+.communication input[type="date"],
+.communication input[type="submit"],
+.communication button[type="submit"],
+.communication select,
+.communication textarea[type="text"],
+.communication textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+}
+
+/* Στοίχιση των τίτλων και των πεδίων */
+.communication label,
+.communication select,
+.communication input[type="text"],
+.communication input[type="password"],
+.communication input[type="date"],
+.communication input[type="submit"],
+.communication button[type="submit"],
+.communication textarea[type="text"],
+.communication textarea {
+    display: block;
+    width: 100%;
+}
+
+/* Κεντράρισμα της φόρμας στο κέντρο της σελίδας */
+.login-container {
+    width: 300px;
+    margin: 200px auto 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Στιλιστική προσθήκη σε εισαγωγικά πεδία και κουμπί */
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Στιλιστική προσθήκη στοιχείων κουμπιού */
+.login-container button {
+    background-color: #b03a3a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #d54b4b;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+/* Στυλ για το κουμπί αποσύνδεσης */
+.logout-button {
+    float: right;
+    margin-right: 30px;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #b03a3a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    background-color: #d54b4b;
+}
+
+/* Στυλ για το μήνυμα συνδεδεμένου χρήστη */
+.welcome-message {
+    margin-left: 30px;
+    font-size: 18px;
+    color: #232323FF;
+    margin-bottom: 20px;
+}
+
+/* Στιλ για τους συνδέσμους "Διαγραφή" και "Επεξεργασία" */
+.announcement,
+.user,
+.document,
+.homework {
+    position: relative;
+}
+
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.actions a {
+    color: #333;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.add-button {
+    background-color: #b03a3a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: #d54b4b;
+}
+
+.goals-container,
+.requirements-container {
+    margin-top: 10px;
+}
+
+.goals-container input,
+.requirements-container input {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
